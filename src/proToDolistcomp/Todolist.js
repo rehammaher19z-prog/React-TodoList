@@ -354,11 +354,14 @@ function handelAddClick() {
                 {/* Filter buttons */}
 
                 <div
+                
+                    className="filters"
                     style={{
                         marginBottom: "10px",
                         marginTop: "10px"
                     }}
                 >
+                
                     <button onClick={() => setFilter("all")}>
                         All Tasks
                     </button>
