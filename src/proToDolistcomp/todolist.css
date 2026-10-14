@@ -295,26 +295,55 @@ body.light-theme {
     }
 }
 
-/* Extra-small phones */
-@media (max-width: 360px) {
-
+@media (max-width: 350px) {
+    /* تقليل المساحات داخل الكارت */
     .container {
         width: calc(100% - 16px);
-        padding: 7px;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    /* مساحة إضافة المهمة */
+    .addinput {
+        margin: 0 !important;
+        padding: 8px 0 !important;
+        gap: 5px;
+    }
+
+    .addinput input {
+        min-width: 0;
+        width: 0;
+        padding: 7px 5px;
+        font-size: 11px;
+    }
+
+    .addinput button {
+        margin: 0;
+        padding: 7px 6px;
+        font-size: 10px;
+        flex-shrink: 0;
+    }
+
+    /* أزرار الفلترة */
+    .filters {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin: 10px 0 !important;
     }
 
     .filters button {
-        font-size: 11px;
+        width: 100%;
+        min-width: 0;
+        margin: 0;
         padding: 8px 2px;
-    }
-
-    .task {
-        margin: 8px 0;
-        padding: 7px 5px;
-    }
-
-    .task button {
         font-size: 10px;
-        padding: 5px 4px;
+        white-space: nowrap;
+    }
+
+    /* الزر الثالث في سطر لوحده */
+    .filters button:nth-child(3) {
+        grid-column: 1 / -1;
+        margin-top: 2px;
     }
 }
