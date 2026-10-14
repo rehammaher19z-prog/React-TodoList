@@ -172,3 +172,68 @@ button:focus-visible {
         margin-left: 2px;
     }
 }
+
+
+
+
+
+/* Light theme: page background */
+body.light-theme {
+    background: linear-gradient(
+        135deg,
+        #f5f3ef 0%,
+        #eeebe5 50%,
+        #e5e0d9 100%
+    );
+}
+
+/* Main Todo List container */
+.light-mode .container {
+    background-color: #faf9f6;
+    color: #393642;
+    border: 1px solid #e5dfd7;
+    box-shadow: 0 8px 25px rgba(45, 38, 55, 0.12);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Task cards */
+.light-mode .task {
+    background-color: #f1eee9;
+    border-color: #e0d9d0;
+    box-shadow: 0 3px 10px rgba(45, 38, 55, 0.06);
+}
+
+.light-mode .task h4 {
+    color: #8b6b82;
+}
+
+/* Input */
+.light-mode input {
+    background-color: #f3f0eb;
+    color: #393642;
+    border-color: #ded7cf;
+}
+
+.light-mode input::placeholder {
+    color: #88818b;
+}
+
+/* Task buttons */
+.light-mode .task button {
+    background-color: #e6e0ef;
+    color: #514568;
+}
+
+.light-mode .task button:hover {
+    background-color: #d5c9e8;
+    color: #29243b;
+}
+
+/* Theme toggle */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-size: 24px;
+}

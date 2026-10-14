@@ -27,12 +27,14 @@
 
 import './App.css';
 import Todolist from './proToDolistcomp/Todolist';
-import CmpPop from './proToDolistcomp/CmpPop';
+import { useState } from 'react';
 
 function App() {
 
   return (
     <div className="App">
+
+      
 
 <Todolist/>
 

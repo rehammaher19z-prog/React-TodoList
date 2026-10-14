@@ -203,11 +203,39 @@ function handelAddClick() {
         setOpenUpdate(false);
     }
 
+    //---------------------------------------
+
+    //darkmode
+
+    const [darkMode, setDarkMode] = useState(true);
+
+
+    useEffect(() => {
+        document.body.classList.toggle("light-theme", !darkMode);
+
+        return () => {
+            document.body.classList.remove("light-theme");
+        };
+    }, [darkMode]);
 
     // ==================== JSX ====================
 
     return (
-        <>
+        <div className={darkMode ? "dark-mode" : "light-mode"}>
+            
+
+
+            <button
+                className="theme-toggle"
+                onClick={() => setDarkMode(!darkMode)}
+
+            >
+                {darkMode ? "☀️" : "🌙"}
+            </button>
+
+
+
+
             {/* Delete confirmation dialog */}
 
             <Dialog
@@ -358,7 +386,7 @@ function handelAddClick() {
                 </div>
 
             </div>
-        </>
+        </div>
     );
 }
 
